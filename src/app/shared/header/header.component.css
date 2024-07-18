@@ -66,6 +66,7 @@ input:focus {
   justify-self: flex-start;
 }
 .atras {
+  text-decoration: none;
   justify-self: flex-end;
   display: grid;
   grid-template-columns: 1fr 1fr;
