@@ -1,0 +1,102 @@
+.encabezado {
+  background: linear-gradient(to bottom, #6b6b6b 85%, transparent);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 70vw;
+  margin: 1em auto;
+  padding: 1em 2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.business-item {
+  text-decoration: none;
+  color: #000;
+  border: 2px solid #ddd;
+  padding: 1em;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.business-item:hover {
+  transform: scale(1.05);
+}
+
+.business-image {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  transition: opacity 0.5s;
+}
+
+.description {
+  position: relative;
+  margin-top: 0.5em;
+}
+
+.short-description {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.business-item:hover .short-description {
+  opacity: 0;
+}
+
+.full-description {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.business-item:hover .full-description {
+  display: block;
+  opacity: 1;
+}
+
+.additional-images-wrapper {
+  height: 5vw; /* Ajusta según el diseño deseado */
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.business-item:hover .additional-images-wrapper {
+  height: auto;
+}
+
+.additional-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.celdas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.additional-image {
+  width: 5vw;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 0 0.5em;
+}
+
+.additional-image:hover {
+  transform: scale(1.05);
+}

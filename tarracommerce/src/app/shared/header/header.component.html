@@ -1,0 +1,70 @@
+<div id="header">
+  <div id="empresa">
+    <a routerLink="inicio">
+      <div class="imagenTexto">
+        <img src="IMG/tienda.png" alt="Logo" height="40vh" />
+        <h1>Tarra<span class="dorado">C</span>ommerce</h1>
+      </div>
+    </a>
+    <p class="dorado">
+      <strong>SCM</strong> - Sustainable Collaborative Marketplace
+    </p>
+  </div>
+  <div>
+    <div id="superior" class="atras">
+      <div class="desplegable">
+        <a routerLink="login">
+          <span class="imagenTexto">
+            <img src="usuario.svg" alt="Logo" height="35vh" />
+            <p class="dorado">Usuario</p>
+          </span>
+        </a>
+      </div>
+      <a href="">
+        <div class="imagenTexto">
+          <img src="carrocompra.svg" alt="Logo" height="35vh" />
+          <p class="dorado">Comprar</p>
+        </div>
+      </a>
+    </div>
+    <div id="inferior">
+      <div class="bordeD">
+        <a routerLink="inicio">Inicio</a>
+      </div>
+      <div class="bordeD bordeI desplegable">
+        <a routerLink="productos">Productos</a>
+        <span class="elementos-desplegable-categorias">
+          <div *ngFor="let categoriaId of categorias">
+            <a
+              [routerLink]="[
+                '/productosCat',
+                categoriaId,
+                getCategoriaNombre(categoriaId)
+              ]"
+            >
+              {{ getCategoriaNombre(categoriaId) }}
+            </a>
+          </div>
+        </span>
+      </div>
+      <div class="bordeD bordeI desplegable">
+        <a routerLink="negocios">Negocios</a>
+        <span class="elementos-desplegable-comercios">
+          <div *ngFor="let negocio of negocios">
+            <a [routerLink]="['/negocio', negocio._id]">{{ negocio.nombre }}</a>
+          </div>
+        </span>
+      </div>
+      <div class="bordeD bordeI">
+        <a routerLink="eventos">Eventos</a>
+      </div>
+      <div class="bordeI">
+        <a routerLink="about">Nosotros</a>
+      </div>
+      <div class="barraBusqueda">
+        <input class="transparente" type="text" placeholder="Buscar..." />
+        <button class="transparente">Buscar</button>
+      </div>
+    </div>
+  </div>
+</div>

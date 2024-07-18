@@ -1,0 +1,51 @@
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+button[disabled] {
+  background-color: #cccccc;
+}
+
+button[type="button"] {
+  background-color: #4285f4;
+}
+
+.error-message {
+  background-color: rgb(0, 0, 0, 0.5);
+  color: red;
+  margin-top: 1rem;
+  padding: 0.2em;
+  border-radius: 5px;
+  font-weight: normal;
+}

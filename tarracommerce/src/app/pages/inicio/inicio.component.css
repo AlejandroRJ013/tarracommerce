@@ -1,0 +1,390 @@
+@keyframes textoSube {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 12em;
+  }
+}
+@keyframes textoBaja {
+  0% {
+    bottom: 12em;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes imagenSube {
+  0% {
+    top: 2em;
+    filter: brightness(65%);
+  }
+  100% {
+    top: 0;
+    filter: brightness(100%);
+  }
+}
+
+@keyframes imagenBaja {
+  0% {
+    top: 0;
+    filter: brightness(100%);
+  }
+  100% {
+    top: 2em;
+    filter: brightness(65%);
+  }
+}
+
+.imageneSlider {
+  width: 100%;
+  position: relative;
+}
+
+.circulo {
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  width: 0.8em;
+  height: 0.8em;
+  cursor: pointer;
+  margin: 0 0.25%;
+}
+
+.circulo:hover {
+  background-color: #fff;
+}
+
+.izquierda {
+  float: left;
+  margin-left: 1em;
+}
+
+.derecha {
+  float: right;
+  margin-right: 1em;
+}
+
+.flecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+.khaki:hover {
+  color: #b4aa50;
+  background-color: rgba(00, 00, 00, 0.2);
+}
+
+.acciones {
+  display: inline-block;
+  margin: 1em 0;
+  font-size: 1em;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(00, 00, 00, 0.2);
+  border-radius: 25px;
+}
+
+.slider {
+  max-width: 60vw;
+  max-height: 60vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 15px;
+  border: 2px solid #2c2827;
+}
+
+.blanco {
+  background-color: #fff;
+}
+
+.contenedorSlider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+  width: 100%;
+}
+
+.elementSlider > a {
+  text-decoration: none;
+}
+
+.elementSlider:hover img {
+  animation: imagenBaja 2s forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+.elementSlider:hover .oculto {
+  animation: textoSube 1s forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+.elementSlider:not(:hover) img {
+  animation: imagenSube 1s forwards;
+}
+
+.elementSlider:not(:hover) .oculto {
+  animation: textoBaja 1s forwards;
+}
+
+#cuadrados {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  align-items: stretch;
+  height: 75vh;
+}
+
+#cuadrados > div {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#cuadrados > div > a {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#cuadrados > div:hover img {
+  animation: imagenBaja 1s forwards;
+  cursor: pointer;
+}
+
+#cuadrados > div:hover .oculto {
+  animation: textoSube 1s forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+#cuadrados > div:not(:hover) img {
+  animation: imagenSube 1s forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+#cuadrados > div:not(:hover) .oculto {
+  animation: textoBaja 1s forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgCuadradas {
+  width: 100%;
+  display: block;
+  position: relative;
+  top: 1em;
+  z-index: 1;
+}
+
+.menuFiltro > ul {
+  list-style-type: none;
+  border-bottom: 2px dashed #999;
+}
+
+.menuFiltro > ul > li > * {
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 3px 0;
+  color: black;
+}
+
+.container {
+  max-width: 70vw;
+  margin: 1em auto;
+  margin-left: 17%;
+  padding: 1em 2em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  align-items: flex-start;
+  gap: 2em;
+  position: relative;
+  right: 4vw;
+  z-index: 2;
+}
+
+/* Para dispositivos grandes (desktop) */
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Para tabletas (portrait y landscape) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Para smartphones (portrait y landscape) */
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.menuFiltro {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  padding-left: 1em;
+  position: sticky;
+  top: 23%;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  width: 15vw;
+  height: 40vh;
+  margin: 2em 0;
+  z-index: 1;
+}
+
+.product-item {
+  border: 2px solid #ddd;
+  padding: 0 1em;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.product-item > .oculto {
+  display: block;
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.product-item:hover .oculto {
+  opacity: 1;
+  max-height: 600px;
+}
+.segundoDiv {
+  display: flex;
+  justify-content: center;
+}
+.segundoDiv > span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.product-item img {
+  max-width: 90%;
+  margin: 0;
+  margin-bottom: 1.5em;
+  position: relative;
+  top: 1em;
+}
+.product-item h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.product-item p {
+  color: #888;
+}
+.product-item button {
+  background-color: #d49537;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0.5em 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.product-item button:hover {
+  background-color: #d49537df;
+}
+
+.delante {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  bottom: 8em;
+}
+
+.oculto {
+  display: none;
+  color: white;
+}
+
+.infoImg {
+  width: 100%;
+  text-align: justify;
+  text-shadow: 1px 1px 2px #2c2827;
+  padding: 0 1em;
+}
+
+.infoImg > * {
+  margin: 0.5em 0;
+}
+
+.azul {
+  background-color: #465b6f;
+}
+
+.rojo {
+  background-color: #a72825;
+}
+
+.gris {
+  background-color: #949da0;
+}
+
+.negro {
+  background-color: #2c2827;
+}
+
+.marron {
+  background-color: #473228;
+}
+
+.bronce {
+  background-color: #934c28;
+}
+
+.blanco {
+  background-color: #c2b4a7;
+}
+
+.crema {
+  background-color: #bd9167;
+}

@@ -1,0 +1,68 @@
+/* .logos {
+  float: right;
+  margin-right: 10px;
+  background: linear-gradient(
+    to top right,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.5)
+  );
+  border-radius: 10%;
+  width: 120px;
+} */
+
+.logos {
+  width: 8em;
+}
+
+#fotoGrupo {
+  background-color: #1b1b1b;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#fotoGrupo > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 50vw;
+  padding: 5vh;
+  padding-top: 0;
+  text-align: justify;
+}
+
+.grupo {
+  float: left;
+  background-color: antiquewhite;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  border-radius: 15px;
+  box-shadow: -10px -10px rgba(0, 0, 0, 0.2);
+}
+.dorado {
+  color: rgba(187, 155, 49, 0.686);
+}
+
+.infoEmpresas {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+}
+.infoEmpresas > p {
+  width: 70vw;
+}
+.nombreLogo {
+  border-radius: 20px;
+  margin: 15px;
+  background-color: #d4af37;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nombreLogo > * {
+  margin: 1em 2em;
+}

@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #dddce0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  min-height: 71.8vh;
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  background-color: #777;
+  color: #fff;
+  padding: 1em 0;
+}
+
+* {
+  font-family: Tahoma;
+}

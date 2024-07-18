@@ -1,0 +1,14 @@
+<div id="contenido">
+  <div class="container">
+    <h1>Eventos Próximos</h1>
+    <ng-container *ngFor="let evento of eventos">
+      <span class="event">
+        <img [src]="evento.imagenes[0]" [alt]="evento.nombre" />
+        <div class="event-details">
+          <h2>{{ evento.nombre }}</h2>
+          <p>{{ evento.descripcion }}</p>
+        </div>
+      </span>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+.detalle-negocio {
+  max-width: 80vw;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nombre {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 1em;
+}
+
+.descripcion-imagenes {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+.detalle-negocio-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.business-image {
+  width: 35vw;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.descripcion {
+  text-align: left;
+  padding: 0 1em;
+}
+
+.descripcion p {
+  margin: 0.5em 0;
+}
+
+.additional-images-wrapper {
+  margin-top: 1em;
+}
+
+.additional-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.celdas {
+  width: 100px; /* Ajusta según el diseño deseado */
+  height: 100px; /* Ajusta según el diseño deseado */
+}
+
+.additional-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.additional-image:hover {
+  transform: scale(1.1);
+}

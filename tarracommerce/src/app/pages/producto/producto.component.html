@@ -1,0 +1,15 @@
+<div class="detalle-producto-container">
+  <div class="product-info">
+    <img
+      [src]="producto.imagen_url"
+      [alt]="producto.nombre"
+      class="product-image"
+    />
+    <div class="product-details">
+      <h1>{{ producto.nombre }}</h1>
+      <p class="descripcion">{{ producto.descripcion }}</p>
+      <p class="precio">{{ producto.precio }} €</p>
+      <button (click)="agregarAlCarrito()">Añadir al carrito</button>
+    </div>
+  </div>
+</div>

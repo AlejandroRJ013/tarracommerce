@@ -1,0 +1,14 @@
+<div id="contenedor" class="contenido">
+  <div class="categoriasTabla">
+    <a
+      [routerLink]="['/productosCat', cat.id, cat.nombre]"
+      class="opcionesCategorias"
+      *ngFor="let cat of categoriasList"
+    >
+      <img [src]="cat.img" [alt]="cat.alt" />
+      <span class="texto">
+        <p>{{ cat.nombre }}</p>
+      </span>
+    </a>
+  </div>
+</div>

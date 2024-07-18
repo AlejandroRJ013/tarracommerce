@@ -1,0 +1,29 @@
+<div class="detalle-negocio" *ngIf="negocio">
+  <h1 class="nombre">{{ negocio.nombre }}</h1>
+  <content class="detalle-negocio-content">
+    <img
+      [src]="negocio.imagenes[currentImageIndex]"
+      [alt]="negocio.nombre"
+      class="business-image"
+    />
+    <div class="descripcion-imagenes">
+      <span class="descripcion">
+        <p>{{ negocio.descripcion }}</p>
+      </span>
+      <section class="additional-images-wrapper">
+        <div class="additional-images">
+          <ng-container *ngFor="let imagen of negocio.imagenes; let i = index">
+            <span class="celdas">
+              <img
+                [src]="imagen"
+                [alt]="negocio.nombre"
+                class="additional-image"
+                (click)="changeCurrentImage(i)"
+              />
+            </span>
+          </ng-container>
+        </div>
+      </section>
+    </div>
+  </content>
+</div>

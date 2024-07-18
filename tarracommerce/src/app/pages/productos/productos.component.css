@@ -1,0 +1,72 @@
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 71.6vh;
+}
+
+.categoriasTabla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em 10em;
+}
+
+.hidden {
+  display: none;
+}
+
+.opcionesCategorias {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  width: 15vw;
+  padding: 0.7em;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  background: linear-gradient(#fff 80%, #d4af37);
+  box-shadow: 5px 5px 10px #e0dfdf, -5px -5px 10px #fff;
+  transform: translateX(0) rotate(0) translateY(0);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.opcionesCategorias::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent 10%, #d4af37);
+  z-index: 0;
+  transition: top 0.5s ease;
+}
+
+.opcionesCategorias:hover::before {
+  top: 0;
+}
+
+.opcionesCategorias:hover {
+  box-shadow: 5px 5px 10px #e0dfdf, -5px -5px 10px #fff;
+  transform: translateX(0.5em) rotate(2deg) translateY(0.2em);
+}
+
+.opcionesCategorias > * {
+  position: relative;
+  z-index: 1;
+}
+.texto {
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.opcionesCategorias > img {
+  margin-left: 5px;
+  width: 2.5em;
+  height: 2.5em;
+}

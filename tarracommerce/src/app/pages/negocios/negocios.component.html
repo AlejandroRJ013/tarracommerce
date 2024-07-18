@@ -1,0 +1,41 @@
+<span class="encabezado">
+  <h1>Negocios</h1>
+</span>
+<div class="segundoDiv crema">
+  <span>
+    <content class="container">
+      <ng-container *ngFor="let negocio of negociosList">
+        <a [routerLink]="['/negocio', negocio._id]" class="business-item">
+          <img
+            [src]="getCurrentImage(negocio)"
+            [alt]="negocio.nombre"
+            class="business-image"
+          />
+          <h2>{{ negocio.nombre }}</h2>
+          <div class="description">
+            <p class="short-description">
+              {{ negocio.descripcion | slice : 0 : 50 }}...
+            </p>
+            <p class="full-description">{{ negocio.descripcion }}</p>
+          </div>
+          <div class="additional-images-wrapper">
+            <div class="additional-images">
+              <ng-container
+                *ngFor="let imagen of negocio.imagenes.slice(1); let i = index"
+              >
+                <span class="celdas">
+                  <img
+                    [src]="imagen"
+                    [alt]="negocio.nombre"
+                    class="additional-image"
+                    (click)="changeCurrentImage(negocio, i + 1)"
+                  />
+                </span>
+              </ng-container>
+            </div>
+          </div>
+        </a>
+      </ng-container>
+    </content>
+  </span>
+</div>
