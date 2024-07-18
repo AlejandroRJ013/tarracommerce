@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { INegocios } from '../../interfaces/negocios';
-import { NegociosService } from '../../servicios/service-negios.service';
+import { NegociosService } from '../../servicios/service-negocios.service';
 import { RouterLink } from '@angular/router';
 
 @Component({

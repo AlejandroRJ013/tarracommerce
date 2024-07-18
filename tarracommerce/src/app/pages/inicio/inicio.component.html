@@ -1,7 +1,7 @@
 <section class="contenedorSlider crema">
   <div class="slider">
     <content class="elementSlider">
-      <a routerLink="about">
+      <a routerLink="/aloe-vera">
         <!-- CAMBIAR EL LINK -->
         <img
           class="imageneSlider"
@@ -17,7 +17,7 @@
       </a>
     </content>
     <content class="elementSlider">
-      <a routerLink="productos">
+      <a routerLink="/camisa-seda">
         <!-- CAMBIAR EL LINK -->
         <img
           class="imageneSlider"
@@ -34,7 +34,7 @@
       </a>
     </content>
     <content class="elementSlider">
-      <a routerLink="tarta-manzana">
+      <a routerLink="/tarta-manzana">
         <img
           class="imageneSlider"
           src="IMG/productos/tartaManzanaS.png"
@@ -47,7 +47,7 @@
       </a>
     </content>
     <content class="elementSlider">
-      <a routerLink="libro">
+      <a routerLink="/libro">
         <img
           class="imageneSlider"
           src="IMG/productos/libroS.png"
@@ -60,7 +60,7 @@
       </a>
     </content>
     <content class="elementSlider">
-      <a routerLink="bolso">
+      <a routerLink="/bolso">
         <img
           class="imageneSlider"
           src="IMG/productos/bolsoS.png"
@@ -73,7 +73,7 @@
       </a>
     </content>
     <content class="elementSlider">
-      <a routerLink="bloques-juguete">
+      <a routerLink="/bloques-juguete">
         <img
           class="imageneSlider"
           src="IMG/productos/bloquesJugueteS.png"
@@ -86,7 +86,7 @@
       </a>
     </content>
     <content class="elementSlider">
-      <a routerLink="croissant">
+      <a routerLink="/croissant">
         <img
           class="imageneSlider"
           src="IMG/productos/croissantS.png"
@@ -99,7 +99,7 @@
       </a>
     </content>
     <content class="elementSlider">
-      <a routerLink="puzzle">
+      <a routerLink="/puzzle">
         <img
           class="imageneSlider"
           src="IMG/productos/puzzleS.png"
@@ -131,7 +131,7 @@
 <div class="segundoDiv">
   <content class="container">
     <ng-container *ngFor="let producto of productosFiltrados">
-      <span class="product-item">
+      <a [routerLink]="['/producto', producto._id]" class="product-item">
         <img [src]="producto.imagen_url" [alt]="producto.nombre" />
         <h2>{{ producto.nombre }}</h2>
         <span class="oculto">
@@ -139,7 +139,7 @@
           <p class="precio">{{ producto.precio }} €</p>
           <button>Añadir al carrito</button>
         </span>
-      </span>
+      </a>
     </ng-container>
   </content>
 </div>

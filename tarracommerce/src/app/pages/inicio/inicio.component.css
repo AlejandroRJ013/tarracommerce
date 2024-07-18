@@ -269,6 +269,8 @@
 }
 
 .product-item {
+  text-decoration: none;
+  color: #000;
   border: 2px solid #ddd;
   padding: 0 1em;
   text-align: center;
@@ -310,6 +312,7 @@
   top: 1em;
 }
 .product-item h2 {
+  text-align: center;
   font-size: 1.2rem;
   margin: 0;
 }

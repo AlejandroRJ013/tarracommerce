@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NegociosService } from '../../servicios/service-negios.service';
+import { NegociosService } from '../../servicios/service-negocios.service';
 import { ProductosService } from '../../servicios/service-productos.service';
 import { INegocios } from '../../interfaces/negocios';
 import { RouterModule } from '@angular/router';
@@ -14,18 +14,7 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   negocios: INegocios[] = [];
-  categoriasMap: { [key: string]: string } = {
-    cat01: 'Alimentos y Bebida',
-    cat02: 'Juguetes y Juegos',
-    cat03: 'Salud y Belleza',
-    cat04: 'Hogar y Decoración',
-    cat05: 'Mascotas',
-    cat06: 'Moda y Accesorios',
-    cat07: 'Libros y Papelería',
-    cat08: 'Tecnología y Electrónica',
-    cat09: 'Deportes y Aire Libre',
-    cat10: 'Artesanía y Manualidades',
-  };
+
   categorias: string[] = [];
 
   constructor(
@@ -55,10 +44,6 @@ export class HeaderComponent implements OnInit {
   }
 
   getCategoriaNombre(catId: string): string {
-    return this.categoriasMap[catId] || 'Categoría Desconocida'; // Valor por defecto
-    console.log(
-      'Nombre categorías:',
-      this.categoriasMap[catId] || 'Categoría Desconocida'
-    );
+    return this.productosService.getCategoriaNombre(catId);
   }
 }

@@ -12,6 +12,18 @@ export class ProductosService {
   private _dataUrl: string =
     'https://tarracommerce-jazsdevs-default-rtdb.europe-west1.firebasedatabase.app/productos.json';
   private carritoCookieName = 'carrito';
+  categoriasMap: { [key: string]: string } = {
+    cat01: 'Alimentos y Bebida',
+    cat02: 'Juguetes y Juegos',
+    cat03: 'Salud y Belleza',
+    cat04: 'Hogar y Decoración',
+    cat05: 'Mascotas',
+    cat06: 'Moda y Accesorios',
+    cat07: 'Libros y Papelería',
+    cat08: 'Tecnología y Electrónica',
+    cat09: 'Deportes y Aire Libre',
+    cat10: 'Artesanía y Manualidades',
+  };
 
   constructor(private http: HttpClient, private cookieService: CookieService) {}
 
@@ -42,5 +54,13 @@ export class ProductosService {
   getCarrito(): IProductos[] {
     const carrito = this.cookieService.get(this.carritoCookieName);
     return carrito ? JSON.parse(carrito) : [];
+  }
+
+  getCategoriaNombre(catId: string): string {
+    return this.categoriasMap[catId] || 'Categoría Desconocida'; // Valor por defecto
+    console.log(
+      'Nombre categorías:',
+      this.categoriasMap[catId] || 'Categoría Desconocida'
+    );
   }
 }
