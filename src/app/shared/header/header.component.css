@@ -65,8 +65,10 @@ input:focus {
 .alante {
   justify-self: flex-start;
 }
-.atras {
+.sindecoration {
   text-decoration: none;
+}
+.atras {
   justify-self: flex-end;
   display: grid;
   grid-template-columns: 1fr 1fr;
